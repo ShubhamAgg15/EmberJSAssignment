@@ -1,0 +1,14 @@
+<div class="todos-page">
+    <div data-test-todo-input>
+        <Input @type="text" placeholder="Enter Todo" @value={{this.todo}} @enter={{fn this.addTodo}}></Input>
+        <button type="button" {{on 'click' this.addTodo}} disabled={{if this.todo false true}}>Save</button>
+    </div>
+    {{#each this.todos as |todo index|}}
+        <div data-test-todo-display>
+            <Input @type="checkbox" @checked={{todo.checked}} {{on 'click' (fn this.updateClearBtnStatus index)}}></Input>
+            <span>{{todo.task}}</span>
+        </div>
+    {{/each}}
+    <br/>
+    <button data-test-clear-todos type="button" {{on 'click' this.clearCompletedTodos}} disabled={{this.noneOfTheTaskCompleted}}>Clear completed Todos</button>
+</div>

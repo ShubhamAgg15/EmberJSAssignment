@@ -1,0 +1,18 @@
+<table data-test-common-table>
+    <thead>
+        <tr>
+            {{#each @header as |header|}}
+                <th>{{header}}</th>
+            {{/each}}
+        </tr>
+    </thead>
+    <tbody>
+        {{#each @rows as |row|}}
+            <tr>
+                {{#each-in row as |column data|}}
+                <td>{{data}}</td>
+                {{/each-in}}
+            </tr>
+        {{/each}}
+    </tbody>
+</table>

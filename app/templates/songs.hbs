@@ -1,0 +1,8 @@
+<div class="songs-page">
+    <div class="song-form">
+        <SongForm @controllerAddAction={{this.addSong}}/>
+    </div>
+    {{#if this.songs}}
+        <CommonTable @header={{this.tableHeader}} @rows={{this.songs}}/>
+    {{/if}}
+</div>
