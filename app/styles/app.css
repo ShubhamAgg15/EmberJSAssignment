@@ -1,0 +1,40 @@
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 20px;
+  }
+
+tr:nth-child(odd) {background-color: #f2f2f2;}
+
+th {
+  background-color: darkgray;
+  color: white;
+}
+
+Input {
+  margin: 10px;
+  margin-left: 0px;
+}
+
+button {
+  text-align: center;
+  min-width: 100px;
+  min-height: 30px;
+}
+
+.links {
+  margin-left: 40%;
+}
+
+.songs-page {
+  margin-left: 25%;
+}
+
+.song-form {
+  float: left;
+  margin-right: 30px;
+}
+
+.todos-page {
+  margin-left: 35%;
+}

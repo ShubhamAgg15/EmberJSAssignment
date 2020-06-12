@@ -1,0 +1,13 @@
+<form {{on 'submit' this.addSong}}>
+    <div>
+        <Input type="text" data-test-title-input placeholder="Title" @value={{this.formDetails.title}} required/>
+    </div>
+    <div>
+        <Input type="text" data-test-artist-input placeholder="Artist" @value={{this.formDetails.artist}} required/>
+    </div>
+    <div>
+        <Input type="number" min="1" data-test-time-input placeholder="Time" @value={{this.formDetails.time}} required/>
+    </div>
+    <button type="submit" data-test-submit-button>Add</button>
+    <button type="button" data-test-reset-button {{on 'click' this.confirmReset}}>Reset</button>
+</form>
